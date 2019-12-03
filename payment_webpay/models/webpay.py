@@ -6,12 +6,16 @@ from odoo.tools.float_utils import float_compare, float_repr
 from odoo.tools.translate import _
 from base64 import b64decode
 import os
+from suds.transport import * 
+from suds.transport.https import HttpTransport
+from suds.cache import ObjectCache
 
-_logger = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__) 
 try:
     from suds.client import Client
     from suds.wsse import Security
     from .wsse.suds import WssePlugin
+    from suds.transport import * 
     from suds.transport.https import HttpTransport
     from suds.cache import ObjectCache
     cache_path = "/tmp/{0}-suds".format(os.getuid())
