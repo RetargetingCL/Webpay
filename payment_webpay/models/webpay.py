@@ -7,7 +7,7 @@ from odoo.tools.translate import _
 from base64 import b64decode
 import os
 from suds.transport import * 
-from suds.transport.https import HttpTransport
+from suds.transport.https import *
 from suds.cache import ObjectCache
 
 _logger = logging.getLogger(__name__) 
