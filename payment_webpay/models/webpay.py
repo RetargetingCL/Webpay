@@ -12,6 +12,7 @@ try:
     from suds.client import Client
     from suds.wsse import Security
     from .wsse.suds import WssePlugin
+    from suds.transport import *
     from suds.transport.https import HttpTransport
     from suds.cache import ObjectCache
     cache_path = "/tmp/{0}-suds".format(os.getuid())
