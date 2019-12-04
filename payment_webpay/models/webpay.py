@@ -137,6 +137,8 @@ class PaymentAcquirerWebpay(models.Model):
     def get_client(self,):
         transport = HttpTransport()
         wsse = Security()
+        logging.info('seguridaaaaad')
+        logging.info(wsse)
         return Client(
             self._get_webpay_urls(),
             transport=transport,
