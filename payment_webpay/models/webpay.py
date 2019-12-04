@@ -21,7 +21,7 @@ try:
     cache_path = "/tmp/{0}-suds".format(os.getuid())
     cache = ObjectCache(cache_path)
 except:
-    _logger.warning("No Load suds or wsse")
+    _logger.warning("No Load suds or wsse") 
     pass
 
 URLS ={
