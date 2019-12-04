@@ -1,6 +1,6 @@
 """Suds plugin for WS-Security (WSSE) encryption/signing."""
 from __future__ import absolute_import
-
+import logging
 from suds.plugin import MessagePlugin
 
 from .encryption import encrypt, decrypt
@@ -50,6 +50,7 @@ class WssePlugin(MessagePlugin):
     def sending(self, context):
         """Sign and encrypt outgoing message envelope."""
         #print(context.envelope)
+        logging.info('aca andoooooooooooooooooooooo')
         context.envelope = sign(
             context.envelope, self.keyfile, self.certfile)
         #print(context.envelope)
